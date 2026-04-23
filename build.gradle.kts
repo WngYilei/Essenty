@@ -13,10 +13,14 @@ import org.jetbrains.kotlin.gradle.dsl.KotlinMultiplatformExtension
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 buildscript {
     repositories {
+        mavenLocal() // 优先使用本地 Maven 仓库
         gradlePluginPortal()
         mavenCentral()
         google()
         maven("https://maven.pkg.jetbrains.space/public/p/compose/dev")
+        maven("https://mirrors.tencent.com/nexus/repository/maven-tencent")
+        maven("https://mirrors.tencent.com/nexus/repository/maven-public")
+        maven("https://repo.huawei.com/repository/maven/")
     }
 
     dependencies {
@@ -48,6 +52,7 @@ setupDefaults(
         watchosCompat()
         tvosCompat()
         macosCompat()
+        ohosArm64()
     },
     androidConfig = AndroidConfig(
         minSdkVersion = 15,
@@ -80,8 +85,12 @@ ensureUnreachableTasksDisabled()
 
 allprojects {
     repositories {
+        mavenLocal() // 优先使用本地 Maven 仓库
         mavenCentral()
         google()
+        maven("https://mirrors.tencent.com/nexus/repository/maven-tencent")
+        maven("https://mirrors.tencent.com/nexus/repository/maven-public")
+        maven("https://repo.huawei.com/repository/maven/")
     }
 
     afterEvaluate {

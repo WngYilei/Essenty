@@ -1,18 +1,18 @@
 [versions]
 
-essenty = "2.5.0"
-kotlin = "2.1.0"
+essenty = "2.5.1-KBA-001"
+kotlin = "2.0.21-KBA-005"
 kotlinxBinaryCompatibilityValidator = "0.16.3"
-kotlinxCoroutines = "1.9.0"
+kotlinxCoroutines = "1.8.0-KBA-001"
 detektGradlePlugin = "1.23.6"
 junit = "4.13.2"
 androidGradle = "8.0.2"
 androidxLifecycle = "2.6.2"
 androidxSavedstate = "1.2.1"
 androidxActivity = "1.8.1"
-jetbrainsKotlinxSerialization = "1.6.3"
+jetbrainsKotlinxSerialization = "1.7.3-TCSL-001"
 robolectric = "4.9.1"
-reaktive = "2.1.0"
+reaktive = "2.3.1-KBA-001"
 
 [libraries]
 

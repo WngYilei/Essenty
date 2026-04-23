@@ -11,13 +11,17 @@ plugins {
 
 setupMultiplatform()
 setupPublication()
-setupBinaryCompatibilityValidator()
+// 临时禁用 BCV 以支持 ohosArm64 目标
+// setupBinaryCompatibilityValidator()
 
 android {
     namespace = "com.arkivanov.essenty.lifecycle.reaktive"
 }
 
 kotlin {
+    // 手动添加 ohosArm64 目标（自定义插件不支持）
+    ohosArm64()
+
     setupSourceSets {
         common.main.dependencies {
             implementation(project(":lifecycle"))
